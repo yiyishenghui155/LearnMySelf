@@ -3,7 +3,7 @@ public class BadArray {
 
     public static void putData(int pos, int num) {
         if (pos < 0) {
-            return;
+            return 1;
         }
         store[pos] = num;
     }
@@ -11,4 +11,5 @@ public class BadArray {
     public static void main(String[] args) {
         putData(5, 100);
     }
+
 }
