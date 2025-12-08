@@ -35,6 +35,7 @@ public class OAuth2LoginSuccessHandler implements org.springframework.security.w
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         OAuth2AuthenticationToken oauthToken = (OAuth2AuthenticationToken) authentication;
+        int i = 1/0;
 
         // application user id
         AuthUserReqDTO authUserReqDTO = oAuthUserExtractor.extract(oauthToken.getPrincipal(), oauthToken);
@@ -80,3 +81,4 @@ public class OAuth2LoginSuccessHandler implements org.springframework.security.w
         }
     }
 }
+
